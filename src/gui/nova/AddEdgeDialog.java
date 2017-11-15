@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 import org.jgraph.graph.CellView;
@@ -18,6 +19,7 @@ import org.jgraph.graph.GraphConstants;
 
 import component.nova.MyGraph;
 import util.nova.ConstantRepository;
+import util.nova.UtilGUI;
 
 /**
  * @ClassName:     AddEdgeDialog.java
@@ -52,7 +54,12 @@ public class AddEdgeDialog extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 // TODO Auto-generated method stub
                 //                //插入cell
-                DefaultEdge edge = new DefaultEdge();
+                if(fromcell.getSelectedItem()==null||tocell.getSelectedItem()==null){
+                    JOptionPane.showMessageDialog(null, "开始节点与结束节点不能为空");
+                }
+                else{
+                //UtilGUI.checkEqu(fromcell.getSelectedItem().toString(), tocell.getSelectedItem().toString());
+                    DefaultEdge edge = new DefaultEdge();
                 //设置格式
                 int arrow = GraphConstants.ARROW_CLASSIC;
                 GraphConstants.setLineEnd(edge.getAttributes(), arrow);
@@ -65,25 +72,23 @@ public class AddEdgeDialog extends JDialog {
                        edge.setTarget(((DefaultMutableTreeNode) cv.getCell()).getChildAt(0));
                    }
                 }
-                // Fetch the ports from the new vertices, and connect them with the edge
-                //                edge.setSource(edge.getChildAt(0));
-                //                edge.setTarget(cells[1].getChildAt(0));
-                //                MyGraphConstants.setName(cell.getAttributes(), "s");
-                //                GraphConstants.setBounds(cell.getAttributes(), new Rectangle2D.Double(20, 20, 40, 20));
                 mg.getGraphLayoutCache().insert(edge);
-                //              for(CellView cv : mg.getGraphLayoutCache().getAllViews()){
-                //                  System.out.println(cv.getAllAttributes().toString());
-                //              }
                 dispose();
+                }
             }
         });
+        this.setLayout(null);
+        from.setBounds(48, 21, 54, 15);
         this.add(from);
+        fromcell.setBounds(137, 18, 106, 21);
         this.add(fromcell);
+        to.setBounds(48, 60, 54, 15);
         this.add(to);
+        tocell.setBounds(137, 57, 106, 21);
         this.add(tocell);
-        this.setLayout(new GridLayout(5, 1));
+        ok.setBounds(91, 108, 93, 23);
         this.add(ok);
-        this.setSize(200, 300);
+        this.setSize(300, 180);
         this.setLocationRelativeTo(null);
         this.setModal(true);
         this.setVisible(true);
