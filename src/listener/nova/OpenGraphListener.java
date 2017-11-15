@@ -9,6 +9,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 import org.jgraph.graph.DefaultGraphCell;
+import org.jgraph.graph.GraphModel;
 
 import component.nova.MyGraph;
 import gui.nova.MainPanel;
@@ -33,7 +34,10 @@ public class OpenGraphListener implements ActionListener{
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
-        System.out.println(xd.readObject());
+        Object[] cells = (Object[]) xd.readObject();
+        for(Object cell:cells){
+            mg.getGraphLayoutCache().insert(cell);
+        }
         xd.close();
         System.out.println("ss");
     }

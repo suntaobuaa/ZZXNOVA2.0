@@ -32,9 +32,8 @@ public class SaveGraphListener implements ActionListener{
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
-        for(CellView cv : mg.getGraphLayoutCache().getAllViews()){
-            xe.writeObject(cv.getCell());
-        }
+        Object[] cells = mg.getRoots();
+        xe.writeObject(cells);
         xe.close();
         System.out.println("±£´æ½áÊø");
     }
