@@ -49,14 +49,14 @@
         <string>x</string>
         <void method="set">
          <object idref="AttributeMap$SerializableRectangle2D0"/>
-         <double>79.0</double>
+         <double>20.0</double>
         </void>
        </void>
        <void class="java.awt.geom.Rectangle2D$Double" method="getField">
         <string>y</string>
         <void method="set">
          <object idref="AttributeMap$SerializableRectangle2D0"/>
-         <double>317.0</double>
+         <double>20.0</double>
         </void>
        </void>
        <void class="java.awt.geom.Rectangle2D$Double" method="getField">
@@ -77,11 +77,11 @@
      </void>
      <void method="put">
       <string>name</string>
-      <string>44</string>
+      <string>4</string>
      </void>
     </void>
     <void property="userObject">
-     <string>44</string>
+     <string>4</string>
     </void>
    </object>
   </void>
@@ -98,14 +98,14 @@
         <string>x</string>
         <void method="set">
          <object idref="AttributeMap$SerializableRectangle2D1"/>
-         <double>398.0</double>
+         <double>345.0</double>
         </void>
        </void>
        <void class="java.awt.geom.Rectangle2D$Double" method="getField">
         <string>y</string>
         <void method="set">
          <object idref="AttributeMap$SerializableRectangle2D1"/>
-         <double>260.0</double>
+         <double>244.0</double>
         </void>
        </void>
        <void class="java.awt.geom.Rectangle2D$Double" method="getField">
@@ -126,11 +126,11 @@
      </void>
      <void method="put">
       <string>name</string>
-      <string>让人</string>
+      <string>6</string>
      </void>
     </void>
     <void property="userObject">
-     <string>让人</string>
+     <string>6</string>
     </void>
    </object>
   </void>

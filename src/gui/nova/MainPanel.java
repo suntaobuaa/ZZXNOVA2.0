@@ -1,5 +1,6 @@
 package gui.nova;
 
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.geom.Rectangle2D;
 import javax.swing.JPanel;

@@ -4,10 +4,14 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JSplitPane;
 import javax.swing.JToolBar;
+import javax.swing.UIManager;
 
 import component.nova.MyMenuBar;
+import component.nova.MyToolBar;
 import gui.nova.MainPanel;
+import gui.nova.MainSplitPanel;
 import gui.nova.SouthPanel;
 import gui.nova.WestPanel;
 
@@ -21,20 +25,20 @@ import gui.nova.WestPanel;
 public class MyFrame extends JFrame{
     private JPanel center = null;
     private JPanel west = null;
-    private JPanel south = null;
+    private MyToolBar toolbar = null;
+    private MainSplitPanel msp = null;
     public MyFrame() {
         // TODO Auto-generated constructor stub
-        center = new MainPanel();
-        west = new WestPanel(this);
-        south = new SouthPanel();
-        
+        //center = new MainPanel();
+        toolbar = new MyToolBar();
+        msp = new MainSplitPanel(JSplitPane.HORIZONTAL_SPLIT);
+        //
         this.setTitle("NOVA");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new BorderLayout());
         this.setJMenuBar(new MyMenuBar());
-        this.add(center,"Center");
-        this.add(west,"West");
-        this.add(south,"South");
+        this.add(toolbar, "North");
+        this.add(msp,"Center");
         this.setResizable(false);
         this.setVisible(true);
         this.setSize(1000,620);
@@ -52,11 +56,4 @@ public class MyFrame extends JFrame{
     public void setWest(JPanel west) {
         this.west = west;
     }
-    public JPanel getSouth() {
-        return south;
-    }
-    public void setSouth(JPanel south) {
-        this.south = south;
-    }
-
 }

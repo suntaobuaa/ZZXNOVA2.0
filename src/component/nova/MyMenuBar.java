@@ -1,5 +1,6 @@
 package component.nova;
 
+import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JToolBar;
@@ -14,9 +15,9 @@ import javax.swing.JToolBar;
 public class MyMenuBar extends JMenuBar{
     public MyMenuBar() {
         // TODO Auto-generated constructor stub
-        this.add(new JMenuItem("保存"));
-        this.add(new JMenuItem("运行"));
-        this.add(new JMenuItem("帮助 "));
+        this.add(new JMenu("保存"));
+        this.add(new JMenu("运行"));
+        this.add(new JMenu("帮助 "));
     }
 
 }
