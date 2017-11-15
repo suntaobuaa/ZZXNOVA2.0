@@ -1,12 +1,8 @@
 package gui.nova;
 
-import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.awt.geom.Rectangle2D;
+
 import javax.swing.JPanel;
-import org.jgraph.graph.DefaultGraphCell;
-import org.jgraph.graph.DefaultGraphModel;
-import org.jgraph.graph.GraphConstants;
 
 import component.nova.MyGraph;
 import util.nova.ConstantRepository;

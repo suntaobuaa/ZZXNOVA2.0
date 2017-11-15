@@ -5,15 +5,10 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
-import javax.swing.JToolBar;
-import javax.swing.UIManager;
 
 import component.nova.MyMenuBar;
 import component.nova.MyToolBar;
-import gui.nova.MainPanel;
 import gui.nova.MainSplitPanel;
-import gui.nova.SouthPanel;
-import gui.nova.WestPanel;
 
 /**
  * @ClassName:     MyFrame.java

@@ -25,7 +25,7 @@ public class MainSplitPanel extends JSplitPane{
         mp = new MainPanel();
         sp = new SouthPanel();
         right = new JSplitPane(JSplitPane.VERTICAL_SPLIT,mp,sp);
-        right.setDividerLocation(500);
+        right.setDividerLocation(450);
         //
         this.setRightComponent(right);
         this.setLeftComponent(wp);

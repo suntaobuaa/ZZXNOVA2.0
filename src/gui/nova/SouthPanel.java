@@ -1,11 +1,10 @@
 package gui.nova;
 
-import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.GridLayout;
 
-import javax.swing.BorderFactory;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 /**
  * @ClassName:     SouthPanel.java
@@ -19,7 +18,7 @@ public class SouthPanel extends JPanel{
     public SouthPanel() {
         // TODO Auto-generated constructor stub
         this.setMinimumSize(new Dimension(0, 0));
-        this.add(new JLabel("south"));
-        this.setBorder(BorderFactory.createLineBorder(Color.red));
+        this.setLayout(new GridLayout(1, 1));
+        this.add(new JTextArea());
     }
 }

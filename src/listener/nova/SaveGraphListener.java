@@ -7,11 +7,7 @@ import java.io.BufferedOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
-import org.jgraph.graph.CellView;
-
 import component.nova.MyGraph;
-import gui.nova.MainPanel;
-import nova.main.MyFrame;
 import util.nova.ConstantRepository;
 
 /**

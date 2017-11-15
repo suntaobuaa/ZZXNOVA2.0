@@ -3,27 +3,21 @@ package gui.nova;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.ComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 import org.jgraph.graph.CellView;
 import org.jgraph.graph.DefaultEdge;
-import org.jgraph.graph.DefaultGraphCell;
 import org.jgraph.graph.GraphConstants;
 
 import component.nova.MyGraph;
-import nova.main.MyFrame;
 import util.nova.ConstantRepository;
-import util.nova.MyGraphConstants;
 
 /**
  * @ClassName:     AddEdgeDialog.java

@@ -8,7 +8,6 @@ import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 
 import org.jgraph.JGraph;
-import org.jgraph.graph.CellView;
 import org.jgraph.graph.DefaultEdge;
 import org.jgraph.graph.DefaultGraphCell;
 import org.jgraph.graph.DefaultGraphModel;

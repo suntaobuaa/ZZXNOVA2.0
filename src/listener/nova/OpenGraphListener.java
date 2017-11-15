@@ -3,17 +3,11 @@ package listener.nova;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.XMLDecoder;
-import java.beans.XMLEncoder;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-import org.jgraph.graph.DefaultGraphCell;
-import org.jgraph.graph.GraphModel;
-
 import component.nova.MyGraph;
-import gui.nova.MainPanel;
-import nova.main.MyFrame;
 import util.nova.ConstantRepository;
 
 /**
