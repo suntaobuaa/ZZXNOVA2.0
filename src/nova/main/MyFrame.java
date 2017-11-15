@@ -11,6 +11,13 @@ import gui.nova.MainPanel;
 import gui.nova.SouthPanel;
 import gui.nova.WestPanel;
 
+/**
+ * @ClassName:     MyFrame.java
+ * @Description:   The MainFrame which contain some panel 
+ * @author         zhangzengxiao
+ * @version        V1.0  
+ * @Date           2017年11月15日 上午9:57:29 
+ */
 public class MyFrame extends JFrame{
     private JPanel center = null;
     private JPanel west = null;
@@ -20,6 +27,7 @@ public class MyFrame extends JFrame{
         center = new MainPanel();
         west = new WestPanel(this);
         south = new SouthPanel();
+        
         this.setTitle("NOVA");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new BorderLayout());

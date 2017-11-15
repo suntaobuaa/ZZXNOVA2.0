@@ -14,19 +14,21 @@ import org.jgraph.graph.GraphModel;
 import component.nova.MyGraph;
 import gui.nova.MainPanel;
 import nova.main.MyFrame;
+import util.nova.ConstantRepository;
 
+/**
+ * @ClassName:     OpenGraphListener.java
+ * @Description:   Open a graph which had been save as a XML file 
+ * @author         zhangzengxiao
+ * @version        V1.0  
+ * @Date           2017年11月15日 上午10:05:21 
+ */
 public class OpenGraphListener implements ActionListener{
-    MyFrame partent = null;
-    public OpenGraphListener(MyFrame partent) {
-        this.partent = partent;
-        
-        // TODO Auto-generated constructor stub
-    }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
-        MainPanel mp = (MainPanel) partent.getCenter();
-        MyGraph mg = mp.getGraph();
+        MyGraph mg = ConstantRepository.mygraph;
         XMLDecoder xd = null;
         try {
             xd = new XMLDecoder(new  BufferedInputStream(new  FileInputStream("myinfo.xml")));
@@ -39,7 +41,6 @@ public class OpenGraphListener implements ActionListener{
             mg.getGraphLayoutCache().insert(cell);
         }
         xd.close();
-        System.out.println("ss");
     }
 
 }

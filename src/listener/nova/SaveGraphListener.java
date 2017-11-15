@@ -12,18 +12,21 @@ import org.jgraph.graph.CellView;
 import component.nova.MyGraph;
 import gui.nova.MainPanel;
 import nova.main.MyFrame;
+import util.nova.ConstantRepository;
 
+/**
+ * @ClassName:     SaveGraphListener.java
+ * @Description:   Save a Jgraph saved as a XML files 
+ * @author         zhangzengxiao
+ * @version        V1.0  
+ * @Date           2017年11月15日 上午10:01:48 
+ */
 public class SaveGraphListener implements ActionListener{
-    MyFrame partent = null;
-    public SaveGraphListener(MyFrame partent) {
-        // TODO Auto-generated constructor stub
-        this.partent = partent;
-    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
-        MainPanel mp = (MainPanel) partent.getCenter();
-        MyGraph mg = mp.getGraph();
+        MyGraph mg = ConstantRepository.mygraph;
         XMLEncoder xe =null;
         try {
             xe = new XMLEncoder(new  BufferedOutputStream(  
@@ -35,7 +38,6 @@ public class SaveGraphListener implements ActionListener{
         Object[] cells = mg.getRoots();
         xe.writeObject(cells);
         xe.close();
-        System.out.println("保存结束");
     }
 
 }

@@ -17,65 +17,6 @@
            <string>endFill</string>
            <boolean>true</boolean>
           </void>
-          <void method="put">
-           <string>points</string>
-           <object class="java.util.ArrayList">
-            <void method="add">
-             <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D" id="AttributeMap$SerializablePoint2D0">
-              <void class="java.awt.geom.Point2D$Double" method="getField">
-               <string>x</string>
-               <void method="set">
-                <object idref="AttributeMap$SerializablePoint2D0"/>
-                <double>60.0</double>
-               </void>
-              </void>
-              <void class="java.awt.geom.Point2D$Double" method="getField">
-               <string>y</string>
-               <void method="set">
-                <object idref="AttributeMap$SerializablePoint2D0"/>
-                <double>40.0</double>
-               </void>
-              </void>
-             </object>
-            </void>
-            <void method="add">
-             <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D" id="AttributeMap$SerializablePoint2D1">
-              <void class="java.awt.geom.Point2D$Double" method="getField">
-               <string>x</string>
-               <void method="set">
-                <object idref="AttributeMap$SerializablePoint2D1"/>
-                <double>254.0</double>
-               </void>
-              </void>
-              <void class="java.awt.geom.Point2D$Double" method="getField">
-               <string>y</string>
-               <void method="set">
-                <object idref="AttributeMap$SerializablePoint2D1"/>
-                <double>78.0</double>
-               </void>
-              </void>
-             </object>
-            </void>
-            <void method="add">
-             <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D" id="AttributeMap$SerializablePoint2D2">
-              <void class="java.awt.geom.Point2D$Double" method="getField">
-               <string>x</string>
-               <void method="set">
-                <object idref="AttributeMap$SerializablePoint2D2"/>
-                <double>271.0</double>
-               </void>
-              </void>
-              <void class="java.awt.geom.Point2D$Double" method="getField">
-               <string>y</string>
-               <void method="set">
-                <object idref="AttributeMap$SerializablePoint2D2"/>
-                <double>184.0</double>
-               </void>
-              </void>
-             </object>
-            </void>
-           </object>
-          </void>
          </void>
          <void property="source">
           <object idref="DefaultPort0"/>
@@ -108,14 +49,14 @@
         <string>x</string>
         <void method="set">
          <object idref="AttributeMap$SerializableRectangle2D0"/>
-         <double>20.0</double>
+         <double>79.0</double>
         </void>
        </void>
        <void class="java.awt.geom.Rectangle2D$Double" method="getField">
         <string>y</string>
         <void method="set">
          <object idref="AttributeMap$SerializableRectangle2D0"/>
-         <double>20.0</double>
+         <double>317.0</double>
         </void>
        </void>
        <void class="java.awt.geom.Rectangle2D$Double" method="getField">
@@ -136,11 +77,11 @@
      </void>
      <void method="put">
       <string>name</string>
-      <string>1</string>
+      <string>44</string>
      </void>
     </void>
     <void property="userObject">
-     <string>1</string>
+     <string>44</string>
     </void>
    </object>
   </void>
@@ -157,14 +98,14 @@
         <string>x</string>
         <void method="set">
          <object idref="AttributeMap$SerializableRectangle2D1"/>
-         <double>271.0</double>
+         <double>398.0</double>
         </void>
        </void>
        <void class="java.awt.geom.Rectangle2D$Double" method="getField">
         <string>y</string>
         <void method="set">
          <object idref="AttributeMap$SerializableRectangle2D1"/>
-         <double>184.0</double>
+         <double>260.0</double>
         </void>
        </void>
        <void class="java.awt.geom.Rectangle2D$Double" method="getField">
@@ -185,11 +126,11 @@
      </void>
      <void method="put">
       <string>name</string>
-      <string>2</string>
+      <string>让人</string>
      </void>
     </void>
     <void property="userObject">
-     <string>2</string>
+     <string>让人</string>
     </void>
    </object>
   </void>

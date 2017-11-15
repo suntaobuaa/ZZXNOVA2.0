@@ -1,34 +1,38 @@
 package gui.nova;
 
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.Rectangle2D;
 
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JDialog;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-import org.jgraph.graph.CellView;
 import org.jgraph.graph.DefaultGraphCell;
 import org.jgraph.graph.GraphConstants;
 
 import component.nova.MyGraph;
-import nova.main.MyFrame;
+import util.nova.ConstantRepository;
 import util.nova.MyGraphConstants;
 
+/**
+ * @ClassName:     AddCellDialog.java
+ * @Description:   A AddCellDialog 
+ * @author         zhangzengxiao
+ * @version        V1.0  
+ * @Date           2017年11月15日 上午10:20:35 
+ */
 public class AddCellDialog extends JDialog{
     private JLabel name = null;
     private JTextField text = null;
     private JButton ok = null;
-    private MyFrame partent = null;
-    public AddCellDialog(MyFrame partent) {
+    private String s = null;
+    MyGraph mg = null;
+    
+    public AddCellDialog() {
         // TODO Auto-generated constructor stub
-        this.setPartent(partent);
         name = new JLabel("请输入节点名称：");
         text = new JTextField();
         ok = new JButton("确认");
@@ -37,11 +41,9 @@ public class AddCellDialog extends JDialog{
             @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO Auto-generated method stub
-              String s = text.getText().trim();
+              s = text.getText().trim();
               //插入cell
-              MyFrame  main =  getPartent();
-              MainPanel mp = (MainPanel) main.getCenter();
-              MyGraph mg = mp.getGraph();
+              mg = ConstantRepository.mygraph;
               DefaultGraphCell cell = new DefaultGraphCell(s);
               MyGraphConstants.setName(cell.getAttributes(), s);
               GraphConstants.setBounds(cell.getAttributes(), new Rectangle2D.Double(20, 20, 40, 20));
@@ -61,11 +63,5 @@ public class AddCellDialog extends JDialog{
         this.setLocationRelativeTo(null);
         this.setModal(true);
         this.setVisible(true);
-    }
-    public MyFrame getPartent() {
-        return partent;
-    }
-    public void setPartent(MyFrame partent) {
-        this.partent = partent;
     }
 }

@@ -2,16 +2,22 @@ package gui.nova;
 
 import java.awt.Color;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-
-import listener.nova.AddCellListener;
-import listener.nova.AddEdgeListener;
 import listener.nova.OpenGraphListener;
 import listener.nova.SaveGraphListener;
 import nova.main.MyFrame;
+/**
+ * @ClassName:     WestPanel.java
+ * @Description:   Some button such as:addnode,add edge,save ,open 
+ * @author         zhangzengxiao
+ * @version        V1.0  
+ * @Date           2017年11月15日 上午10:17:25 
+ */
 public class WestPanel extends JPanel{
     JButton addnode = null;
     JButton addedge = null;
@@ -26,10 +32,24 @@ public class WestPanel extends JPanel{
         addedge = new JButton("添加连线");
         save = new JButton("保存");
         open = new JButton("打开");
-        addedge.addActionListener(new AddEdgeListener(partent));
-        addnode.addActionListener(new AddCellListener(partent));
-        save.addActionListener(new SaveGraphListener(partent));
-        open.addActionListener(new OpenGraphListener(partent));
+        addedge.addActionListener(new ActionListener() {
+            
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // TODO Auto-generated method stub
+                AddEdgeDialog ap = new AddEdgeDialog();
+            }
+        });
+        addnode.addActionListener(new ActionListener() {
+            
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // TODO Auto-generated method stub
+                AddCellDialog ap = new AddCellDialog();
+            }
+        });
+        save.addActionListener(new SaveGraphListener());
+        open.addActionListener(new OpenGraphListener());
         this.add(addnode);
         this.add(addedge);
         this.add(save);

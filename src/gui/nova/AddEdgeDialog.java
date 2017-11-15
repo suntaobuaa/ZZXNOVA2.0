@@ -22,25 +22,30 @@ import org.jgraph.graph.GraphConstants;
 
 import component.nova.MyGraph;
 import nova.main.MyFrame;
+import util.nova.ConstantRepository;
 import util.nova.MyGraphConstants;
 
+/**
+ * @ClassName:     AddEdgeDialog.java
+ * @Description:   The AddEdgeDialog 
+ * @author         zhangzengxiao
+ * @version        V1.0  
+ * @Date           2017年11月15日 上午10:09:05 
+ */
 public class AddEdgeDialog extends JDialog {
     private JLabel from = null;
     private JLabel to = null;
     private JComboBox fromcell = null;
     private JComboBox tocell = null;
     private JButton ok = null;
-    private MyFrame partent = null;
     private List<String> cellname = new ArrayList<String>();
 
-    public AddEdgeDialog(MyFrame partent) {
+    public AddEdgeDialog() {
         // TODO Auto-generated constructor stub
-        this.setPartent(partent);
         from = new JLabel("from:");
         to = new JLabel("to:");
-        MyFrame main = getPartent();
-        MainPanel mp = (MainPanel) main.getCenter();
-        MyGraph mg = mp.getGraph();
+        MyGraph mg = ConstantRepository.mygraph;
+        //读取图上已经存在的组件名称
         for (CellView cv : mg.getGraphLayoutCache().getAllViews()) {
             cellname.add((String) cv.getAllAttributes().get("name"));
         }
@@ -54,16 +59,15 @@ public class AddEdgeDialog extends JDialog {
                 // TODO Auto-generated method stub
                 //                //插入cell
                 DefaultEdge edge = new DefaultEdge();
+                //设置格式
                 int arrow = GraphConstants.ARROW_CLASSIC;
                 GraphConstants.setLineEnd(edge.getAttributes(), arrow);
                 GraphConstants.setEndFill(edge.getAttributes(), true);
                 for (CellView cv : mg.getGraphLayoutCache().getAllViews()) {
                    if(cv.getAllAttributes().get("name")!=null&&(cv.getAllAttributes().get("name").equals(fromcell.getSelectedItem().toString()))){
-                       System.out.println("2");
                        edge.setSource(((DefaultMutableTreeNode) cv.getCell()).getChildAt(0));
                    }
                    if(cv.getAllAttributes().get("name")!=null&&(cv.getAllAttributes().get("name").equals(tocell.getSelectedItem().toString()))){
-                       System.out.println(3);
                        edge.setTarget(((DefaultMutableTreeNode) cv.getCell()).getChildAt(0));
                    }
                 }
@@ -91,11 +95,4 @@ public class AddEdgeDialog extends JDialog {
         this.setVisible(true);
     }
 
-    public MyFrame getPartent() {
-        return partent;
-    }
-
-    public void setPartent(MyFrame partent) {
-        this.partent = partent;
-    }
 }
