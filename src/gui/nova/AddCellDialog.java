@@ -57,7 +57,7 @@ public class AddCellDialog extends JDialog {
                     DefaultGraphCell cell = new MyGraphCell();
                     cell.setUserObject(s);
                     MyGraphConstants.setName(cell.getAttributes(), s);
-                    GraphConstants.setGradientColor(cell.getAttributes(), Color.red);
+                    GraphConstants.setGradientColor(cell.getAttributes(), Color.CYAN);
                     GraphConstants.setOpaque(cell.getAttributes(), true);
                     GraphConstants.setBounds(cell.getAttributes(), new Rectangle2D.Double(20, 20, 60, 40));
                     cell.addPort();

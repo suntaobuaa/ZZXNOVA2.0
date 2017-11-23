@@ -11,6 +11,7 @@ import javax.swing.JPopupMenu;
 
 import org.jgraph.graph.DefaultGraphCell;
 
+import gui.nova.EditCellDialog;
 import util.nova.ConstantRepository;
 
 /**
@@ -29,6 +30,14 @@ public class CellPopMenu extends JPopupMenu{
         Object[] cells = {cell};
         edit = new JMenuItem("±à¼­");
         delete = new JMenuItem("É¾³ý");
+        edit.addActionListener(new ActionListener() {
+            
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // TODO Auto-generated method stub
+                new EditCellDialog(cell);
+            }
+        });
         delete.addActionListener(new ActionListener() {
             
             @Override
