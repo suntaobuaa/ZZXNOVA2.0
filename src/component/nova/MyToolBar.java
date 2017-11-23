@@ -6,6 +6,7 @@ package component.nova;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.rmi.CORBA.Util;
 import javax.swing.JButton;
 import javax.swing.JToolBar;
 
@@ -35,12 +36,15 @@ public class MyToolBar extends JToolBar{
     public MyToolBar() {
         // TODO Auto-generated constructor stub
         button1 = new JButton();
-        UtilGUI.setImageIcon(button1, "video_play_64.png", "运行");
+        UtilGUI.setImageIcon(button1, "video_play_64.png", "运行工作流");
         button2 = new JButton();
-        UtilGUI.setImageIcon(button2, "inbox_64.png", "保存");
-        button3 = new JButton("打开");
-        button4 = new JButton("添加节点");
-        button5 = new JButton("添加连线");
+        UtilGUI.setImageIcon(button2, "inbox_64.png", "保存图片");
+        button3 = new JButton();
+        UtilGUI.setImageIcon(button3, "outbox_64.png", "打开图片");
+        button4 = new JButton();
+        UtilGUI.setImageIcon(button4, "frame_64.png", "添加节点");
+        button5 = new JButton();
+        UtilGUI.setImageIcon(button5, "arrow_64.png", "添加连线");
         button2.addActionListener(new SaveGraphListener());
         button3.addActionListener(new OpenGraphListener());
         button4.addActionListener(new ActionListener() {
