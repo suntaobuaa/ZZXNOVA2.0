@@ -3,6 +3,9 @@
  */
 package gui.nova;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
@@ -10,6 +13,7 @@ import javax.swing.JTextField;
 
 import org.jgraph.graph.DefaultGraphCell;
 
+import util.nova.ConstantRepository;
 import util.nova.MyGraphConstants;
 
 /**
@@ -92,6 +96,17 @@ public class EditCellDialog extends JDialog{
         //
         button1 = new JButton("确认");
         button1.setBounds(62, 452, 93, 30);
+        button1.addActionListener(new ActionListener() {
+            
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // TODO Auto-generated method stub
+                cell.setUserObject(parameter1_value.getText().toString());
+                MyGraphConstants.setName(cell.getAttributes(), parameter1_value.getText().toString());
+                ConstantRepository.mygraph.updateUI();
+                dispose();
+            }
+        });
         button2 = new JButton("取消");
         button2.setBounds(178, 452, 93, 30);
         //

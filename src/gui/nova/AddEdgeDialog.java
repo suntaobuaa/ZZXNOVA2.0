@@ -1,6 +1,5 @@
 package gui.nova;
 
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -19,7 +18,7 @@ import org.jgraph.graph.GraphConstants;
 
 import component.nova.MyGraph;
 import util.nova.ConstantRepository;
-import util.nova.UtilGUI;
+import util.nova.MyGraphConstants;
 
 /**
  * @ClassName:     AddEdgeDialog.java
@@ -65,11 +64,13 @@ public class AddEdgeDialog extends JDialog {
                 GraphConstants.setLineEnd(edge.getAttributes(), arrow);
                 GraphConstants.setEndFill(edge.getAttributes(), true);
                 for (CellView cv : mg.getGraphLayoutCache().getAllViews()) {
-                   if(cv.getAllAttributes().get("name")!=null&&(cv.getAllAttributes().get("name").equals(fromcell.getSelectedItem().toString()))){
+                   if(cv.getAllAttributes().get("name")!=null && (cv.getAllAttributes().get("name").equals(fromcell.getSelectedItem().toString()))){
                        edge.setSource(((DefaultMutableTreeNode) cv.getCell()).getChildAt(0));
+                       MyGraphConstants.setPartent(edge.getAttributes(), (String) cv.getAllAttributes().get("name"));
                    }
-                   if(cv.getAllAttributes().get("name")!=null&&(cv.getAllAttributes().get("name").equals(tocell.getSelectedItem().toString()))){
+                   if(cv.getAllAttributes().get("name")!=null && (cv.getAllAttributes().get("name").equals(tocell.getSelectedItem().toString()))){
                        edge.setTarget(((DefaultMutableTreeNode) cv.getCell()).getChildAt(0));
+                       MyGraphConstants.setChild(edge.getAttributes(),(String) cv.getAllAttributes().get("name"));
                    }
                 }
                 mg.getGraphLayoutCache().insert(edge);
@@ -77,6 +78,7 @@ public class AddEdgeDialog extends JDialog {
                 }
             }
         });
+        
         this.setLayout(null);
         from.setBounds(48, 21, 54, 15);
         this.add(from);

@@ -1,8 +1,5 @@
 package util.nova;
 
-import javax.swing.JTree;
-import javax.swing.tree.DefaultMutableTreeNode;
-
 import org.jgraph.graph.DefaultGraphModel;
 
 import component.nova.MyGraph;

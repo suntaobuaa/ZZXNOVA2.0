@@ -22,6 +22,8 @@ public class MainPanel extends JPanel{
     public MainPanel() {
         this.setLayout(new GridLayout(1, 1));
         graph = ConstantRepository.mygraph;
+        graph.setInvokesStopCellEditing(true);
+        graph.setEditClickCount(Integer.MAX_VALUE);
         this.add(graph);
     }
 }

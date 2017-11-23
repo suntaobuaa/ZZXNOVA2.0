@@ -3,11 +3,7 @@
  */
 package component.nova;
 
-import java.util.Enumeration;
-
 import javax.swing.JTree;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.MutableTreeNode;
 import javax.swing.tree.TreeNode;
 
 /**

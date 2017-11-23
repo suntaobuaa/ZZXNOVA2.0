@@ -8,7 +8,6 @@ package test.nova;
 * @place：广州大学华软软件学院
 */
 import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;

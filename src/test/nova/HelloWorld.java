@@ -11,10 +11,6 @@ import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 
 import org.jgraph.JGraph;
-import org.jgraph.event.GraphModelEvent;
-import org.jgraph.event.GraphModelListener;
-import org.jgraph.event.GraphSelectionEvent;
-import org.jgraph.event.GraphSelectionListener;
 import org.jgraph.graph.DefaultEdge;
 import org.jgraph.graph.DefaultGraphCell;
 import org.jgraph.graph.DefaultGraphModel;
@@ -99,6 +95,7 @@ public class HelloWorld {
         // Show in Frame
         JFrame frame = new JFrame();
         frame.getContentPane().add(new JScrollPane(graph));
+        System.out.println(graph.isEditable());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
@@ -109,7 +106,6 @@ public class HelloWorld {
 
         // Create vertex with the given name
         DefaultGraphCell cell = new DefaultGraphCell(name);
-
         // Set bounds
         GraphConstants.setBounds(cell.getAttributes(), new Rectangle2D.Double(x, y, w, h));
 
@@ -128,7 +124,7 @@ public class HelloWorld {
 
         // Add a Floating Port
         cell.addPort();
-
+        System.out.println(cell.getAttributes());
         return cell;
     }
 
