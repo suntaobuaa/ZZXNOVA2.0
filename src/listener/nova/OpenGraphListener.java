@@ -4,8 +4,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.XMLDecoder;
 import java.io.BufferedInputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+
+import javax.swing.JFileChooser;
 
 import component.nova.MyGraph;
 import util.nova.ConstantRepository;
@@ -24,12 +27,18 @@ public class OpenGraphListener implements ActionListener{
         // TODO Auto-generated method stub
         MyGraph mg = ConstantRepository.mygraph;
         XMLDecoder xd = null;
+        JFileChooser jf = new JFileChooser();
+        jf.showOpenDialog(mg);
+        File openfile = jf.getSelectedFile();
+        if (openfile == null) return;
         try {
-            xd = new XMLDecoder(new  BufferedInputStream(new  FileInputStream("myinfo.xml")));
+            xd = new XMLDecoder(new  BufferedInputStream(new  FileInputStream(openfile)));
         } catch (FileNotFoundException e1) {
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
+        mg.getGraphLayoutCache().remove(mg.getRoots());
+        mg.updateUI();
         Object[] cells = (Object[]) xd.readObject();
         for(Object cell:cells){
             mg.getGraphLayoutCache().insert(cell);

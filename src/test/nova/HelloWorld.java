@@ -1,13 +1,20 @@
 package test.nova;
 
 import java.awt.Color;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.geom.Rectangle2D;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
+import javax.swing.SwingUtilities;
 
 import org.jgraph.JGraph;
+import org.jgraph.event.GraphModelEvent;
+import org.jgraph.event.GraphModelListener;
+import org.jgraph.event.GraphSelectionEvent;
+import org.jgraph.event.GraphSelectionListener;
 import org.jgraph.graph.DefaultEdge;
 import org.jgraph.graph.DefaultGraphCell;
 import org.jgraph.graph.DefaultGraphModel;
@@ -21,7 +28,42 @@ public class HelloWorld {
         // Construct Model and Graph
         GraphModel model = new DefaultGraphModel();
         JGraph graph = new JGraph(model);
-
+        graph.addMouseListener(new MouseListener() {
+            
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                // TODO Auto-generated method stub
+                
+            }
+            
+            @Override
+            public void mousePressed(MouseEvent e) {
+                // TODO Auto-generated method stub
+                if(SwingUtilities.isRightMouseButton(e)){
+                    if(graph.getFirstCellForLocation(e.getX(), e.getY())!= null){
+                        System.out.println(graph.getFirstCellForLocation(e.getX(), e.getY()));
+                    }
+                }
+            }
+            
+            @Override
+            public void mouseExited(MouseEvent e) {
+                // TODO Auto-generated method stub
+                
+            }
+            
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                // TODO Auto-generated method stub
+                
+            }
+            
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // TODO Auto-generated method stub
+                
+            }
+        });
         // Control-drag should clone selection
         graph.setCloneable(true);
 

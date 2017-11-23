@@ -4,8 +4,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.XMLEncoder;
 import java.io.BufferedOutputStream;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+
+import javax.swing.JFileChooser;
 
 import component.nova.MyGraph;
 import util.nova.ConstantRepository;
@@ -24,9 +27,13 @@ public class SaveGraphListener implements ActionListener{
         // TODO Auto-generated method stub
         MyGraph mg = ConstantRepository.mygraph;
         XMLEncoder xe =null;
+        JFileChooser jf = new JFileChooser();
+        jf.showSaveDialog(ConstantRepository.mygraph);
+        File savefile = jf.getSelectedFile();
+        if (savefile == null) return;
         try {
             xe = new XMLEncoder(new  BufferedOutputStream(  
-                    new  FileOutputStream("myinfo.xml")));
+                    new  FileOutputStream(savefile)));
         } catch (FileNotFoundException e1) {
             // TODO Auto-generated catch block
             e1.printStackTrace();

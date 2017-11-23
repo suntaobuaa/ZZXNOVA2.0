@@ -13,6 +13,7 @@ import gui.nova.AddCellDialog;
 import gui.nova.AddEdgeDialog;
 import listener.nova.OpenGraphListener;
 import listener.nova.SaveGraphListener;
+import util.nova.UtilGUI;
 
 /**
  * @ClassName:     MyToolBar.java
@@ -33,8 +34,10 @@ public class MyToolBar extends JToolBar{
     
     public MyToolBar() {
         // TODO Auto-generated constructor stub
-        button1 = new JButton("开始");
-        button2 = new JButton("保存");
+        button1 = new JButton();
+        UtilGUI.setImageIcon(button1, "video_play_64.png", "运行");
+        button2 = new JButton();
+        UtilGUI.setImageIcon(button2, "inbox_64.png", "保存");
         button3 = new JButton("打开");
         button4 = new JButton("添加节点");
         button5 = new JButton("添加连线");

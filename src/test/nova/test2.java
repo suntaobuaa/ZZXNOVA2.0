@@ -18,7 +18,6 @@ public class test2 extends javax.swing.JFrame {
     public static void main(String[] args) {
         test2 f = new test2();
     }
-
     JLabel label1;
     JLabel label2;
     JLabel label3;

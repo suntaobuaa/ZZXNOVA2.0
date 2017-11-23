@@ -21,6 +21,7 @@ import org.jgraph.graph.DefaultGraphCell;
 import org.jgraph.graph.GraphConstants;
 
 import component.nova.MyGraph;
+import component.nova.MyGraphCell;
 import util.nova.ConstantRepository;
 import util.nova.MyGraphConstants;
 import util.nova.UtilGUI;
@@ -52,8 +53,9 @@ public class AddCellDialog extends JDialog {
                 // TODO Auto-generated method stub
                 s = text.getText().trim();
                 //插入cell
-                if (UtilGUI.checkZero(s, "节点名称")&&checkCellexistence(s, mg)) {
-                    DefaultGraphCell cell = new DefaultGraphCell(s);
+                if (UtilGUI.checkEmpty(s, "节点名称")&&checkCellexistence(s, mg)) {
+                    DefaultGraphCell cell = new MyGraphCell();
+                    cell.setUserObject(s);
                     MyGraphConstants.setName(cell.getAttributes(), s);
                     GraphConstants.setGradientColor(cell.getAttributes(), Color.red);
                     GraphConstants.setOpaque(cell.getAttributes(), true);

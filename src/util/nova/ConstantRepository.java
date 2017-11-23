@@ -1,8 +1,12 @@
 package util.nova;
 
+import javax.swing.JTree;
+import javax.swing.tree.DefaultMutableTreeNode;
+
 import org.jgraph.graph.DefaultGraphModel;
 
 import component.nova.MyGraph;
+import component.nova.MyJTree;
 
 /**
  * @ClassName:     ConstantRepository.java
@@ -13,5 +17,6 @@ import component.nova.MyGraph;
  */
 public class ConstantRepository {
     public static MyGraph mygraph = new MyGraph(new DefaultGraphModel());
+    public static MyJTree jtree ;
 
 }
