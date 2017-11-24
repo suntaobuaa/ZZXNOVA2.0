@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="E:/JavaProject/ZZXNOVA/jgraph-5.13.0.0.jar" sourcepath="D:/360极速浏览器下载/jgraph-5.14.0.0.zip"/>
 	<classpathentry kind="lib" path="E:/JavaProject/ZZXNOVA2.0/substance-5.3.jar"/>
 	<classpathentry kind="lib" path="E:/JavaProject/ZZXNOVA2.0/liquidlnf.jar"/>
+	<classpathentry kind="lib" path="E:/JavaProject/ZZXNOVA2.0/jgraph-5.13.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

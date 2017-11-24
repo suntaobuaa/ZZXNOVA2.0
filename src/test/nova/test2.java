@@ -29,6 +29,7 @@ public class test2 extends javax.swing.JFrame {
     JButton bt2;
 
     public test2() {
+        String s = "testgit";
         this.setVisible(true);
         this.setSize(250, 220);
         this.setVisible(true);
