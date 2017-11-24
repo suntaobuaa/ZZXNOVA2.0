@@ -95,7 +95,9 @@ public class HelloWorld {
         // Show in Frame
         JFrame frame = new JFrame();
         frame.getContentPane().add(new JScrollPane(graph));
-        System.out.println(graph.isEditable());
+        System.out.println(cells[0] instanceof DefaultEdge);
+        System.out.println(cells[1] instanceof DefaultEdge);
+        System.out.println(cells[2] instanceof DefaultEdge);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
