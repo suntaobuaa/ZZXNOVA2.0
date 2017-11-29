@@ -34,7 +34,7 @@ public class MyFrame extends JFrame{
         this.setJMenuBar(new MyMenuBar());
         this.add(toolbar, "North");
         this.add(msp,"Center");
-        this.setResizable(false);
+        this.setResizable(true);
         this.setVisible(true);
         this.setSize(1000,620);
         this.setLocationRelativeTo(null);

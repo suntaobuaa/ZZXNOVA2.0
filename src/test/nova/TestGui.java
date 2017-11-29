@@ -57,12 +57,12 @@ public class TestGui {
   
         pRight.setBackground(Color.BLUE);
         //pRight.setBounds(10, 150, 300, 60);
-        pLeft.setMinimumSize(new Dimension(0, 0));
-        pRight.setMinimumSize(new Dimension(0, 0));
+        //pLeft.setMinimumSize(new Dimension(0, 0));
+        //pRight.setMinimumSize(new Dimension(0, 0));
         // 创建一个水平JSplitPane，左边是p1,右边是p2
         JSplitPane sp = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, pLeft, pRight);
         // 设置分割条的位置
-        sp.setDividerLocation(80);
+        sp.setDividerLocation(0.9);
 //        sp.setOneTouchExpandable(true);
   
         // 把sp当作ContentPane

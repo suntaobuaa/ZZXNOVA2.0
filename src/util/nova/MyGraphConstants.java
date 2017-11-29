@@ -20,6 +20,8 @@ public class MyGraphConstants extends GraphConstants {
     public final static String partent = "partent";
     //edge's child
     public final static String child = "child";
+    //Commands
+    public final static String Commands = "commands";
     //get and set name 
     public static final void setName(Map map, String cellname) {
         map.put(name, cellname);
@@ -53,5 +55,15 @@ public class MyGraphConstants extends GraphConstants {
         if (s != null)
             return s;
         return JLabel.CENTER;
+    }
+    //get and set Commands
+    public static final void setCommands(Map map, String inputCommands) {
+        map.put(Commands, inputCommands);
+    }
+    public static final Object getCommands(Map map) {
+        String s = (String) map.get(Commands);
+        if (s != null)
+            return s;
+        return "";
     }
 }
