@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
  * @Place          北京航空航天大学中德软件联合研究所
  */
 public class UtilGUI {
-    private static String imageFolder = "E:/JavaProject/ZZXNOVA2.0/img";
+    private static String imageFolder = "./img";
     
     public static void setImageIcon(JButton b, String fileName, String tip) {
         ImageIcon i = new ImageIcon(new File(imageFolder, fileName).getAbsolutePath());
